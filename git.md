@@ -20,3 +20,15 @@
 ---
 ## 把本地库的所有内容推送到远程库上
 `git push -u origin master`
+
+## 查看版本之间的不同  
+查看当前没有add 的内容修改  
+`git  diff`  
+查看已经add 没有commit 的改动  
+`git diff --cached`  
+查看当前没有add和commit的改动  
+`git diff HEAD` 
+`git status` 
+
+## 查看加入git中的文件列表  
+`git ls-files`  
