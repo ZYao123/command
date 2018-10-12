@@ -6,8 +6,8 @@
 
 ---
 ## 添加指定文件到暂存区
-`git add [file1] [file2]`
-## 添加指定目录到暂存区，包括子目录
+`git add [file1] [file2]`  
+添加指定目录到暂存区，包括子目录  
 `git add [dir]`
 
 ---
@@ -32,3 +32,11 @@
 
 ## 查看加入git中的文件列表  
 `git ls-files`  
+
+## 将文件（夹）移出git
+`git rm`  
+删除暂存区或分支和本地工作区文件  
+`git rm --cached`    
+删除暂存区或分支中的文件
+`git rm -r -n --cached "bin/"`  
+展示要删除的文件表预览

@@ -4,14 +4,16 @@
 - [lsof](#lsof)
 - [netstat](#netstat)
 - [kill](#kill)
----
+
+---  
 ## ps  
 `ps -aux|grep chat.js`  
 用于报告当前系统的进程状态  
 >a:显示所有程序  
 >u:以用户为主的格式来显示  
 >x:显示所有程序，不以终端机来区分  
----
+
+---  
 ## lsof  
 `lsof -i:8090`  
 用于查看你进程开打的文件，打开文件的进程，进程打开的端口(TCP、UDP)。找回/恢复删除的文件。因为lsof命令需要访问核心内存和各种文件，所以需要root用户执行。  
@@ -27,7 +29,8 @@
 >-u：列出UID号进程详情；  
 >-h：显示帮助信息； 
 >-v：显示版本信息。  
----
+
+---  
 ## netstat  
 `netstat -pan | grep 5623`  
 查看端口占用  
@@ -55,7 +58,8 @@
 >-w或--raw：显示RAW传输协议的连线状况；  
 >-x或--unix：此参数的效果和指定"-A unix"参数相同；  
 >--ip或--inet：此参数的效果和指定"-A inet"参数相同。  
----
+
+---  
 ## kill
 用来删除执行中的程序或工作  
 `kill  -9 2078`  
@@ -75,7 +79,7 @@
 >CONT   18    继续（与STOP相反， fg/bg命令）  
 >STOP   19    暂停（同 Ctrl + Z）  
 
----
+---  
 ## java -jar *.jar
 运行jar包
 ## nohup command &
@@ -90,12 +94,11 @@
 - bg %N 使第N个任务在后台运行(%前有空格)  
 - fg %N 使第N个任务在前台运行  
 
----
-
-# jar  
-## jar -xvf hello.war  
+---  
+## jar  
+`jar -xvf hello.war ` 
 将war包解压到当前文件夹  
-## jar -cvfM0 hello.war ./  
+`jar -cvfM0 hello.war ./ ` 
 将当前文件夹下所有内容打成war包  
 
 >x 解包  
@@ -104,7 +107,7 @@
 >0 这个是阿拉伯数字，只打包不压缩的意思  
 
 ---  
-# tail
+## tail
 依照要求将指定的文件的最后部分输出到标准设备，通常是终端，通俗讲来，就是把某个档案文件的最后几行显示到终端上，假设该档案有更新，tail会自己主动刷新，确保你看到最新的档案内容。  
 `tail -f logs/catalina.out`  
 >-f 该参数用于监视File文件增长。  
@@ -113,3 +116,23 @@
 >-m Number 从 Number 多字节字符位置读取指定文件，比方你的文件假设包括中文字，假设指定-c参数，可能导致截断，但使用-m则会避免该问题。  
 >-b Number 从 Number 表示的512字节块位置读取指定文件。  
 >-k Number 从 Number 表示的1KB块位置读取指定文件。  
+
+---  
+## 
+查看运行进程所在目录  
+`ll /proc/PID`  
+>cwd符号链接的是进程运行目录；  
+>exe符号连接就是执行程序的绝对路径；  
+>cmdline就是程序运行时输入的命令行命令；  
+>environ记录了进程运行时的环境变量；  
+>fd目录下是进程打开或使用的文件的符号连接。  
+
+---  
+## tar  
+解压.tar.gz  
+`tar zxvf pythontab.tar.gz`  
+
+---  
+## gzip  
+解压.gz  
+`gzip -b pythontab.gz`
