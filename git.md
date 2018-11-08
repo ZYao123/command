@@ -21,6 +21,10 @@
 ## 把本地库的所有内容推送到远程库上
 `git push -u origin master`
 
+## 强制推送到远程库上
+`git push -f origin master`
+
+---
 ## 查看版本之间的不同  
 查看当前没有add 的内容修改  
 `git  diff`  
@@ -30,9 +34,11 @@
 `git diff HEAD` 
 `git status` 
 
+---
 ## 查看加入git中的文件列表  
 `git ls-files`  
 
+---
 ## 将文件（夹）移出git
 `git rm`  
 删除暂存区或分支和本地工作区文件  
