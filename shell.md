@@ -154,6 +154,22 @@
 ## tar  
 解压.tar.gz  
 `tar zxvf pythontab.tar.gz`  
+将img1和img2两个文件夹打包成img.tar，仅打包不压缩
+`tar -cvf img.tar img1 img2`
+将img1和img2两个文件夹打包成img.tar.gz，打包后，以gzip压缩
+`tar -zcvf img.tar.gz img1 img2`
+>-c: --create 新建一个压缩文档，即打包  
+>-x: --extract,--get解压文件  
+>-t: --list,查看压缩文档里的所有内容  
+>-r:--append 向压缩文档里追加文件  
+>-u:--update 更新原压缩包中的文件  
+
+- -z:是否同时具有gzip的属性？即是否需要用gzip压缩或解压？一般格式为xxx.tar.gz或xx.tgz  
+- -j：是否同时具有bzip2的属性？即是否需要用bzip2压缩或解压？一般格式为xx.tar.bz2  
+- -v:显示操作过程！这个参数很常用  
+- -f：使用文档名，注意，在f之后要立即接文档名，不要再加其他参数！  
+- -C:切换到指定目录  
+- --exclude FILE:在压缩过程中，不要将FILE打包  
 
 ---  
 ## gzip  
